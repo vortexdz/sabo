@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القرآن الكريم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c8a97e">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="surah-sidebar" id="surahList">
+            <div class="sidebar-header">
+                <h2>سور القرآن الكريم</h2>
+                <p class="surah-count">١١٤ سورة</p>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث عن سورة...">
+            </div>
+            
+            <!-- Category Buttons -->
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">الكل</button>
+                <button class="category-btn" data-category="makkah">مكية</button>
+                <button class="category-btn" data-category="madinah">مدنية</button>
+            </div>
+            
+            <!-- Surah List -->
+            <div class="surah-list-container"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="surahContent">
+            <nav class="top-nav">
+                <button class="menu-btn" id="toggleSidebar">
+                    <span></span>
+                </button>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="ابحث في القرآن الكريم...">
+                </div>
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="themeToggle">🌙</button>
+                    <button class="font-size" id="fontDecrease">-</button>
+                    <button class="font-size" id="fontIncrease">+</button>
+                </div>
+            </nav>
+            <div class="quran-display">
+                <div class="surah-header">
+                    <div class="ornament-left"></div>
+                    <h1>القرآن الكريم</h1>
+                    <div class="ornament-right"></div>
+                </div>
+                <div class="surah-content"></div>
+            </div>
+        </div>
+        
+        <!-- Reading Progress -->
+        <div class="reading-progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <script src="quran-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
